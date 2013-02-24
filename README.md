@@ -1,6 +1,6 @@
 # README #
 
-This software is built on a very basic MVP framework.  Controllers are static classes and are available anywhere in the application.
+This software is built on a very basic MVP framework.
 
 ## Basic Configurations ##
 
@@ -31,20 +31,24 @@ This software is built on a very basic MVP framework.  Controllers are static cl
 				 $this->fields = array('id', 'email_address');
 				 $user = $this->read();
 				 var_dump($user);
-	Model:
+
+#### Modelling #### 
 		
-		Lib/Model.php contains 2 classes.  One is a simpleton (Model), the other is a Static class (DbUtils).  Models require convention and a bit of configuration.
-		- Methods:
-			* Create
-			* Read
-			* Update
-			* Delete
+Lib/Model.php contains 2 classes.  One is a simpleton (Model), the other is a Static class (DbUtils).  Models require convention based configuration.
 
-		- Configuration:
-			* All models must contain the following as a minimum:
+* Methods:
+** Create
+** Read
+** Update
+** Delete
 
-				Example:
+### Convention/Configuration ###
 
+All models must contain the following as a minimum:
+
+Example:
+
+```
 				public $name = 'ModelName';
 				public $config = array('table' => 'table_name',
 									   'model' => 'Same as $this->name',
@@ -54,13 +58,14 @@ This software is built on a very basic MVP framework.  Controllers are static cl
 											  			 'more_field' => 'no'
 														 )
 									   );
+```
+As you can see, defaults can be set.
+Custom SELECT queries can be used with $this->rawQuery().
 
-			** As you can see, defaults can be set.
-			** Custom SELECT queries can be used with $this->rawQuery().
+### Request ###
 
-	Request:
+Lib/Request.php is a static HTTP request class, heavily borrowed from cakePHP.
 
-		Lib/Request.php is a static HTTP request class.
 		- Methods:
 			* isPost
 			* isPut
