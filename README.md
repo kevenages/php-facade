@@ -20,7 +20,7 @@ Very basic MVP framework written in PHP.
 A basic CRUD framework can be found in Lib/Model.php
 Uses the ADODB/PHP ORM
 
-#### Modelling #### 
+#### Modelling ####
 		
 Lib/Model.php contains 2 classes.  One is a simpleton (Model), the other is a Static class (DbUtils).  Models require convention based configuration.
 
