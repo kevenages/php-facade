@@ -71,13 +71,14 @@ $email = "email@someemail.com";
 
 Lib/Request.php is a static HTTP request class, heavily borrowed from cakePHP.
 
-		- Methods:
-			* isPost
-			* isPut
-			* isGet
-			* isDelete
-			* isMobile
-			* isAjax
+**Methods:**
+			
+* isPost
+* isPut
+* isGet
+* isDelete
+* isMobile
+* isAjax
 
 ### Routing ###
 
