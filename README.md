@@ -53,7 +53,7 @@ public $config = array('table' => 'table_name',
 
 $Model->setPrimaryKey('some_key') can be used in place of a WHERE statement
 
-Eg:  Primary Key is `id`, but we want to query based on `email_address` using only read()
+Eg:  Primary Key is `id`, but we want to query based on `email_address` using only $Model->read()
 
 ```			
 $email = "email@someemail.com";
