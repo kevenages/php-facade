@@ -1,9 +1,8 @@
-README
-------
+# README
+
 This software is built on a very basic MVP framework.  Controllers are static classes and are available anywhere in the application.
 
-Basic Framework:
-================
+## Basic Framework:
 
 	Error Handling: 
 		Exceptions are thrown everywhere (as `Exception`) and are captured/extended in the Controllers.
