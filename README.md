@@ -38,32 +38,33 @@ All models must contain the following as a minimum:
 **Example:**
 
 ```
-				public $name = 'ModelName';
-				public $config = array('table' => 'table_name',
-									   'model' => 'Same as $this->name',
-									   'primaryKey' => 'id',
-									   'schema' => array('some_field' => null,
-											  			 'another_field' => 1,
-											  			 'more_field' => 'no'
-														 )
-									   );
+public $name = 'ModelName';
+public $config = array('table' => 'table_name',
+					   'model' => 'Same as $this->name',
+					   'primaryKey' => 'id',
+					   'schema' => array('some_field' => null,
+							  			 'another_field' => 1,
+							  			 'more_field' => 'no'
+										 )
+					   );
 ```
 
 ### Hack-ables ###  
 
-```
-			//$Model->setPrimaryKey('some_key') can be used in place of a WHERE statement
-			//Eg:  Primary Key is `id`, but we want to query based on `email_address` using only read()
-			
-				 $email = "email@someemail.com";
-				 //Field name
-				 $this->setPrimaryKey('email_address');
-				 //Field value
-				 $this->id = $email;
-				 //Optional: Filter columns to return
-				 $this->fields = array('id', 'email_address');
-				 $user = $this->read();
-				 var_dump($user);
+$Model->setPrimaryKey('some_key') can be used in place of a WHERE statement
+
+Eg:  Primary Key is `id`, but we want to query based on `email_address` using only read()
+
+```			
+$email = "email@someemail.com";
+// Set field name
+  $this->setPrimaryKey('email_address');
+// Set Field value
+  $this->id = $email;
+//Optional: Filter columns to return
+  $this->fields = array('id', 'email_address');
+  $user = $this->read();
+  var_dump($user);
 ```
 
 ### Request ###
@@ -78,23 +79,27 @@ Lib/Request.php is a static HTTP request class, heavily borrowed from cakePHP.
 			* isMobile
 			* isAjax
 
-	Routing:
+### Routing ###
 
-		Lib/Route.php is very rudimentary routing layer.  Routes are defined in Config/routes.php and act as a layer between the Controller and the View.
+Lib/Route.php is very rudimentary routing layer.  Routes are defined in Config/routes.php and can act as a layer between the Controller and the View.
 
-	Sanitization:
+### Sanitization ###
 
-		Lib/Sanitize.php is a static sanitization class used to Sanitize user input.
-		- Methods:
-			* html
-			* clean
+Lib/Sanitize.php is a static sanitization class used to Sanitize user input.
 
-	Sessions:
+**Methods:**
+
+* html
+* clean
+
+### Sessions ###
 		
-		Lib/Session is a static class to deal with session vars.  This class starts and destroys a session as well as sets php_ini defaults.
+Lib/Session is a static class to deal with session vars.  This class starts and destroys a session as well as sets php_ini defaults.
 
-	String:
+### String: ###
 
-		Lib/String is a static class that deals with various string functions.
-		- Methods:
-			* uuid
+Lib/String is a static class that deals with various string functions.
+
+**Methods:**
+
+* uuid
