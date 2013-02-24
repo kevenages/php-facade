@@ -1,6 +1,6 @@
 # README #
 
-This software is built on a very basic MVP framework.
+Very basic MVP framework written in PHP.
 
 ## Basic Configurations ##
 
