@@ -49,7 +49,7 @@ public $config = array('table' => 'table_name',
 					   );
 ```
 
-### Hack-ables ###  
+#### Hack-ables ####
 
 $Model->setPrimaryKey('some_key') can be used in place of a WHERE statement
 
