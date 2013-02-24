@@ -1,0 +1,19 @@
+### PHP
+### Force globals off
+php_flag register_globals off
+
+RewriteEngine On
+#RewriteBase /
+
+### Force SSL
+
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://localhost/php-facade/$1 [R,L]
+
+### Routing
+
+### Ignore files
+RewriteCond %{REQUEST_FILENAME} !-f
+### Ignore directories
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
