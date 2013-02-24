@@ -67,7 +67,7 @@ $email = "email@someemail.com";
   var_dump($user);
 ```
 
-### Request ###
+### Requests ###
 
 Lib/Request.php is a static HTTP request class, heavily borrowed from cakePHP.
 
@@ -97,7 +97,7 @@ Lib/Sanitize.php is a static sanitization class used to Sanitize user input.
 		
 Lib/Session is a static class to deal with session vars.  This class starts and destroys a session as well as sets php_ini defaults.
 
-### String: ###
+### Strings ###
 
 Lib/String is a static class that deals with various string functions.
 
