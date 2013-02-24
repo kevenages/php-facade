@@ -4,14 +4,14 @@ Very basic MVP framework written in PHP.
 
 ## Basic Configurations ##
 
-	**Error Handling:** 
-		Exceptions are thrown everywhere (as `Exception`) and are captured/extended in the Controllers.
+	**Error Handling:**
+	  Exceptions are thrown everywhere (as `Exception`) and are captured/extended in the Controllers.
 
-	**Application strings:** 		
-		All strings found in the app are defined in Config/definitions.php
+	**Application strings:**
+	  All strings found in the app are defined in Config/definitions.php
 	
-	**Application configuration:** 
-		All configuration variables are defined in Config/core.php
+	**Application configuration:**
+	  All configuration variables are defined in Config/core.php
 
 ## Application ##
 	
