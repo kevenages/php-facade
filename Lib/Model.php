@@ -205,9 +205,7 @@ class Model extends Object {
  * DBFormatUtils Class
  * static class for mysql/database formatting
  * 
- * @author Keven Ages <kages@torstardigital.com>
- * @copyright 2012 Torstar Digital
- * @copyright 2012 Wagjag.com
+ * @author Keven Ages <kages@gmail.com>
  * @version 1.0
  * @since 1.0
  *
